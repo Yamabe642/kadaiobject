@@ -190,7 +190,7 @@ public class VendingMachineApp {
         Scanner scanner = new Scanner(System.in);
         VendingMachineController vm = new VendingMachineController();
 
-        System.out.println("=== 高機能自動販売機シミュレータ ===");
+        System.out.println("=== 自動販売機シミュレータ ===");
 
         while (true) {
             System.out.println("\n===========================================");
@@ -246,7 +246,7 @@ public class VendingMachineApp {
                     }
                     break;
 
-                case "5": // ★システム終了処理。ここを選んだ時だけプログラムが終了します
+                case "4": // ★システム終了処理。ここを選んだ時だけプログラムが終了します
                     // もしお金を入れたまま終了しようとした場合は自動でお釣りを出す親切設計
                     int remainingMoney = vm.getCurrentInsertedMoney();
                     if (remainingMoney > 0) {
