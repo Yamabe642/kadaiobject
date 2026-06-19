@@ -173,7 +173,8 @@ class VendingMachineController {
             String timestamp = now.format(formatter);
             
             pw.println(timestamp + "," + drinkName + "," + price + "円");
-            
+            pw.flush(); // ★ここを追加！溜まったログデータを強制的にCSVファイルへ書き込みます
+          
         } catch (IOException e) {
             System.out.println("【システム警告】CSVログの書き込みに失敗しました: " + e.getMessage());
         }
